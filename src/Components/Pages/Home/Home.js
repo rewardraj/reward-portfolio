@@ -4,6 +4,7 @@ import Hero from '../../Atoms/Hero/Hero';
 import About from '../About/About';
 import Services from '../Services/Services';
 import Projects from '../Projects/Projects';
+import Contact from '../Contact/Contact';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +17,8 @@ const Home = () => {
       <About />
       <Services />
       <Projects />
+      <Contact />
+      
     </>
   )
 }
