@@ -25,13 +25,13 @@ const DescText = styled.div`
 `
 const Blinker = styled.span`
     animation: ${blink} 1.2s linear infinite;
-    color: var(--text-primary);
+    color: #f46c3f;
 `
 
 const Span = styled.span`
     align-items: center;
     justify-content: center;
-    color: #2de1db;
+    color: #f46c3f;
 `
 
 const Typed = ({ phrases = [] }) => {

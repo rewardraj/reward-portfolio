@@ -23,6 +23,7 @@ import {
   StatsHolder,
   Exp,
 } from './AboutElements';
+import aboutBG from '../../Photos/aboutBG.png'
 
 
 
@@ -37,16 +38,16 @@ const About = () => {
   return (
     <AboutContainer id='about' ref={ref}>{inView ?
    
-      <ImageWrapper src='/images/about.png' 
+      <ImageWrapper src={aboutBG} 
       initial={{ x: -100, opacity: 0}}
       animate={{ x: 0, opacity: 1}}
       transition={{
         duration: 0.8,
         delay: 0.2,
         easein: [0, 0.71, 0.2, 1.01]
-      }}>
+      }} />
         
-      </ImageWrapper>
+    
 
     : null}
 
@@ -77,14 +78,14 @@ const About = () => {
 
           <StatsWrapper>
             <StatsHolder>
-              <CountUp end={8} duration={0.8}/> 
+              <CountUp end={14} duration={0.8}/> 
             </StatsHolder>
             <Exp>Projects <br />Completed</Exp>
           </StatsWrapper>
 
           <StatsWrapper>
             <StatsHolder>
-              <CountUp end={4} duration={0.8}/>
+              <CountUp end={20} duration={0.8}/>
             </StatsHolder>
             <Exp>Satisfied <br />Customers</Exp>
           </StatsWrapper>

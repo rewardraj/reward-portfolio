@@ -9,9 +9,9 @@ export const Nav = styled.nav`
     width: 100%;
     display: flex;
     z-index: 1000;
-    height: 70px;
-    background-color: #243949;
-    background-image: linear-gradient(212deg, #243949 0%, #517fa4 100%);
+    min-height: 75px;
+    background: #f46c3f;
+        
     justify-content: center;
     align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -102,10 +102,10 @@ export const NavBtn = styled.nav`
 `
 
 export const NavBtnLink = styled(Link)`
-    border-radius: 50px;
-    background: var(--gradient-tertiary);
+    border-radius: 20px;
+    background: #3196e2;
     white-space: nowrap;
-    padding: 10px 22px;
+    padding: 10px 20px;
     color: #fffffe;
     font-size: 18px;
     outline: none;

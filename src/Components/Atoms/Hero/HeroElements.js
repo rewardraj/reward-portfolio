@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
@@ -6,13 +7,12 @@ export const HeroContainer = styled.div`
     place-items: center;
     // width: 100%;
     max-width: 1920px;
-    padding: 0 var(--macro);
+    padding: var(--gutter) var(--macro);
     gap: var(--whitespace);
     position: relative;
     min-height: 100vh;
     justify-content: left;
     color: var(--text-primary);
-    
 
     @media (max-width:768px) {
         display: flex;
@@ -20,10 +20,17 @@ export const HeroContainer = styled.div`
         justify-content: center;
     }
 
+    // @media (max-width: 850px) {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    // }
+
 `
 
 export const TextWrapper = styled.div`
-    margin-left: 7%;
+    // margin-left: 5%;
+    flex-basis: 55%;
     font-family: var(--future-pt);
 
     @media (max-width:768px) {
@@ -83,16 +90,33 @@ export const SocialIcons = styled.div`
     display: flex;
     font-size: 30px;
     gap: 30px;
+    justify-content: center;
     transition: 0.3s;
     // max-width: max-content;
-    margin: var(--gutter) auto;
+    // margin: var(--gutter) auto;
 `
 
 export const SocialLink = styled.a`
     cursor: pointer;
 `
 
-export const ImageWrapper = styled.img`
-    height: 500px;
-    width: 500px;
+export const ImageWrapper = styled(motion.img)`
+    height: 520px;
+    width: 600px;
+    flex-basis: 43%;
+    mix-blend-mode: exclusion;
+    border: 1px solid  rgba(255, 255, 255, 0.5);
+    border-radius:35% 65% 54% 46% / 62% 36% 64% 38%;
+    transition: border-radius 500ms ease-in-out;
+
+    &:hover {
+        border-radius: 54% 46% 20% 80% / 25% 13% 87% 75% ;
+    }
+
+    @media (max-width:768px) {
+        max-height: 400px;
+        max-width: 400px;
+    }
+
+    
 `

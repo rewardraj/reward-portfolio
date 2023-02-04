@@ -93,8 +93,9 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
     width: 100%;
     position: relative;
-    background-color: #243949;
-    background-image: linear-gradient(212deg, #243949 0%, #517fa4 100%);
+    background-color: #141e30;
+background-image: linear-gradient(348deg, #141e30 0%, #243b55 100%);
+
     font-family: var(--futura-pt);
   }
 

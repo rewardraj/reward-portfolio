@@ -2,15 +2,11 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const ServicesContainer = styled(motion.div)`
-    // display: flex;
     align-items: center;
-    // width: 100%;
     max-width: 1920px;
     padding: var(--gutter) var(--whitespace) 0;
-    // gap: var(--default);
     position: relative;
     min-height: 100vh;
-    // justify-content: space-between;
 
     @media (max-width:770px) {
         padding: var(--whitespace) var(--gutter);

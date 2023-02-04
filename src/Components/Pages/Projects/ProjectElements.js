@@ -3,72 +3,94 @@ import styled from "styled-components"
 export const ProjectContainer = styled.div`
     align-items: center;
     max-width: 1920px;
-    padding: var(--gutter) var(--whitespace) ;
+    padding: var(--gutter) var(--whitespace);
     position: relative;
     min-height: 100vh;
 
     @media (max-width:770px) {
         padding: 0 var(--gutter);
-        // display: flex;
-        // flex-direction: column;
     }
 
-`
-
-export const TextWrapper = styled.div`
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-
-
-     @media (max-width:770px) {
-         justify-content: center;
-         text-align: center;
-         margin: 0;
-         margin-bottom: var(--whitespace);
-         
-    }
-`
-export const TextH2 = styled.h2`
-    color: var(--text-primary);
-    font-weight: 600;
-    font-size: 45px;
-    
-    @media (max-width:770px) {
-        font-size: 38px;
-        font-weight: 600;
-        width: 100%;
-    }
-`
-export const  TextP = styled.p`
-    color: var(--text-primary);
-    font-size: 22px;
-    max-width: max-content;
 `
 
 export const Wrapper = styled.div`
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-margin-left: -1rem;
-margin-right: -1rem;
+    padding: var(--gutter) var(--gutter);
+    grid-template-columns: repeat(auto-fit, 440px);
+    grid-gap: var(--whitespace);
+    max-width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 `
 
-// export const Name = styled.h4``
-// export const Description = styled.p``
+export const ProjectIntro = styled.div`
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+`
+
+export const TextH2 = styled.h2`
+    line-height: 1.2rem;
+    color: var(--text-primary);
+    font-size: var(--text-lg)
+
+`
+
+export const TextP = styled.p`
+    max-width: 24rem;
+    margin-bottom: 4rem;
+    font-size: 22px;
+    color: var(--text-primary);
+`
+export const ProjectMain = styled.div`
+    position: relative;
+    // overflow: hidden;
+    width: 100%;
+    max-width: 450px;
+    // margin: 0 auto;
+    border-radius: 0.75rem;
+    // background: #3196e2;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    &:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+    }
+`
+
 
 export const Image = styled.img`
-    height: 300px;
-    width: 400px;
-`
-export const Overlay = styled.div`
-width: calc(33.33% - 1rem);
-margin-left: 1rem;
-margin-right: 1rem;
+height: auto;
+width: 100%;
+border-radius: 0.40rem;
+transition-property: transform;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 500ms;
+cursor: pointer;
+transform: scale(1); 
 
-@media (max-width: 992px) {
-    width: 100%;
-  }
+// &:hover {
+//     transform: scale(1.05);
+// }
+`
+
+export const PreTitle = styled.div`
+    // position: absolute;
+    // bottom: -100%;
+    // left: 3rem;
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+
+    transition-property: transform;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 500ms;
+        z-index: 50;
+
+    // &:hover {
+    //     bottom: 6rem;
+        
+    // }
+`
+
+export const Text = styled.span`
+    color: var(--text-primary);
 `

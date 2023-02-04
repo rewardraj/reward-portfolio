@@ -5,7 +5,6 @@ export const AboutContainer = styled.div`
 
     display: flex;
     align-items: center;
-    // width: 100%;
     max-width: 1920px;
     padding: 0 var(--macro);
     gap: var(--default);
@@ -49,7 +48,7 @@ export const TextWrapper = styled(motion.div)`
 `
 
 export const Title = styled.h2`
-    font-size: var(--text-md);
+    font-size: var(--text-lg);
     font-weight: 600;
     padding-bottom: var(--default);
 
@@ -66,6 +65,7 @@ export const TitleH3 = styled.h3`
 export const TextP = styled.p`
     font-size: 22px;
     font-weight: 400;
+    font-size: 24px;
     line-height: var(--line-height-lg);
 `
 
@@ -87,16 +87,14 @@ export const StatsWrapper = styled.div`
 }
 `
 export const StatsHolder = styled.div`
-    font-size: 50px;
+    font-size: 60px;
     margin-bottom: 5px;
-    color: var(--text-secondary);
-    background: linear-gradient(to right, #ff0000, #ffff00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #f46c3f;
+    
 `
 
 export const Exp = styled.h3`
     font-style: primary;
-    font-size: 20px;
+    font-size: 22px;
 `
 

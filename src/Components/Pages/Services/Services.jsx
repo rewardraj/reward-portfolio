@@ -47,9 +47,9 @@ const animateContainer = {
     show: {
         opacity: 1,
         transition: {
-            easeIn: [0.17, 0.67, 0.83, 0.67],
-            duration: 1,
-            delayChildren: 0.5,
+            easeIn: [0, 0.17, 0.2, 1.01],
+            duration: 0.8,
+            delayChildren: 0.2,
             staggerChildren: 0.6,
         }
     }
@@ -63,7 +63,7 @@ const animateItem = {
 const Services = () => {
 
     const [ref, inView] = useInView({
-        threshold: 0.2,
+        threshold: 0.1 ,
     });
 
   return (

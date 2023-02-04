@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import Navbar from '../../Atoms/Navbar/Navbar'
-import Hero from '../../Atoms/Hero/Hero';
-import About from '../About/About';
-import Services from '../Services/Services';
-import Projects from '../Projects/Projects';
-import Contact from '../Contact/Contact';
+import Navbar from '../../Atoms/Navbar/Navbar.jsx'
+import Hero from '../../Atoms/Hero/Hero.jsx';
+import About from '../About/About.jsx';
+import Services from '../Services/Services.jsx';
+import Projects from '../Projects/Projects.jsx';
+import Contact from '../Contact/Contact.jsx';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);

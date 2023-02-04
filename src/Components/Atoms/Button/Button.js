@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledButton = styled.button`
     border-radius: 20px;
-    background: var(--gradient-tertiary);
+    background: #3196e2;
     white-space: nowrap;
     padding: 15px 25px;
     color: #fffffe;
