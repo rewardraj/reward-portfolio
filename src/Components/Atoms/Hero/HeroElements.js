@@ -114,8 +114,7 @@ export const ImageWrapper = styled(motion.img)`
     }
 
     @media (max-width:768px) {
-        max-height: 400px;
-        max-width: 400px;
+        display: none;
     }
 
     

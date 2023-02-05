@@ -87,6 +87,10 @@ export const GlobalStyle = createGlobalStyle`
     /* stops blue box on touch event elements */
     -webkit-tap-highlight-color: transparent;
     -moz-tap-highlight-color: transparent;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
   body {
@@ -94,8 +98,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     position: relative;
     background-color: #141e30;
-background-image: linear-gradient(348deg, #141e30 0%, #243b55 100%);
-
+    background-image: linear-gradient(348deg, #141e30 0%, #243b55 100%);
     font-family: var(--futura-pt);
   }
 

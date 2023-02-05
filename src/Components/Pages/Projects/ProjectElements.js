@@ -6,6 +6,7 @@ export const ProjectContainer = styled.div`
     padding: var(--gutter) var(--whitespace);
     position: relative;
     min-height: 100vh;
+    width: 120%;
 
     @media (max-width:770px) {
         padding: 0 var(--gutter);
@@ -30,6 +31,7 @@ export const ProjectIntro = styled.div`
 
 export const TextH2 = styled.h2`
     line-height: 1.2rem;
+    margin-bottom: var(--gutter);
     color: var(--text-primary);
     font-size: var(--text-lg)
 
@@ -37,7 +39,7 @@ export const TextH2 = styled.h2`
 
 export const TextP = styled.p`
     max-width: 24rem;
-    margin-bottom: 4rem;
+    margin-bottom: var(--gutter);
     font-size: 22px;
     color: var(--text-primary);
 `

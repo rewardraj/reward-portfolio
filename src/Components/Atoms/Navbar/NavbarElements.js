@@ -10,7 +10,8 @@ export const Nav = styled.nav`
     display: flex;
     z-index: 1000;
     min-height: 75px;
-    background: #f46c3f;
+    background-color: #141e30;
+    background-image: linear-gradient(348deg, #141e30 0%, #243b55 100%);
         
     justify-content: center;
     align-items: center;

@@ -6,9 +6,11 @@ import {
   TextH2,
   FormHeading,
   Form,
-  Input
+  Input,
+  Textarea
 
 } from './ContactElements'
+import Button from '../../Atoms/Button/Button'
 
 const Contact = () => {
   return (
@@ -18,7 +20,7 @@ const Contact = () => {
       <TextWrapper>
         <FormHeading>
         <TextH4>Get in touch</TextH4>
-        <TextH2>Let's work <br /> together!</TextH2>
+        <TextH2>I'm a message <br /> away!</TextH2>
         </FormHeading>
       </TextWrapper>
 
@@ -27,8 +29,10 @@ const Contact = () => {
     
         <Input type="text" name="email" placeholder="Your Email" />
         <Input type="text" name="name" placeholder="Your Name" />
-        <Input type="text" name="message" placeholder="Your Message" />
+        <Textarea type="text" placeholder="Your Message"></Textarea>
+        <Button text={"Send Message"} size={"0.9rem"}/>
       </Form>
+      
     </Container>
     </>
   )
