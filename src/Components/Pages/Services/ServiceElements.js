@@ -39,6 +39,7 @@ export const TextH2 = styled.h2`
     color: var(--text-primary);
     font-weight: 600;
     font-size: 45px;
+    margin-bottom: var(--default);
 
     @media (max-width:770px) {
         font-size: 38px;
@@ -53,6 +54,7 @@ export const TextH3 = styled.h3`
     font-size: 26px;
     font-weight: 400;
     word-wrap: wrap;
+    margin-bottom: var(--default);
     line-height: var(--line-height-lg);
     
 `

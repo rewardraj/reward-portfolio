@@ -30,6 +30,8 @@ export const TextWrapper = styled.div`
 
     @media (max-width:770px) {
         text-align: center;
+        justify-content: center;
+        align-items: center;
         padding: 0 var(--gutter);
     }    
 `
@@ -52,13 +54,23 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    flex-basis: 50%;
+    flex-basis: 40%;
     gap: 1.5rem;
     margin-top: var(--gutter);
     border: 0.5px solid var(--text-primary);
     border-radius: 1rem;
     padding: var(--gutter) var(--gutter);
     color: var(--text-primary);
+    height: max-content;
+    width: max-content;
+
+    @media (max-width:920px) {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 0 var(--gutter);
+        width: 100%;
+    }  
 `
 
 export const Input = styled.input`

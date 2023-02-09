@@ -5,9 +5,9 @@ export const HeroContainer = styled.div`
     display: flex;
     align-content: center;
     place-items: center;
-    // width: 100%;
+    width: 100%;
     max-width: 1920px;
-    padding: var(--gutter) var(--macro);
+    padding: var(--gutter) var(--macro) 0;
     gap: var(--whitespace);
     position: relative;
     min-height: 100vh;
@@ -28,12 +28,21 @@ export const HeroContainer = styled.div`
 
 `
 
+// export const HeroSection = styled.section`
+// display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     max-width: 100%;
+// `
+
 export const TextWrapper = styled.div`
     // margin-left: 5%;
     flex-basis: 55%;
+    text-align: left;
     font-family: var(--future-pt);
 
-    @media (max-width:768px) {
+    @media (width <= 768px) {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -53,6 +62,17 @@ export const HeroTitle = styled.h1`
         justify-content: center;
     }
     
+`
+
+export const HeroP = styled.p`
+    padding: 0;
+    font-size: var(--text-sm);
+    margin-bottom: var(--inline);
+    
+    @media (width <= 768px) {
+        text-align: center;
+        justify-content: center;
+    }
 `
 
 export const HeroDescription = styled.div`
@@ -84,20 +104,6 @@ export const Text = styled.a`
     background: linear-gradient(to right, #ff0000, #ffff00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-`
-
-export const SocialIcons = styled.div`
-    display: flex;
-    font-size: 30px;
-    gap: 30px;
-    justify-content: center;
-    transition: 0.3s;
-    // max-width: max-content;
-    // margin: var(--gutter) auto;
-`
-
-export const SocialLink = styled.a`
-    cursor: pointer;
 `
 
 export const ImageWrapper = styled(motion.img)`

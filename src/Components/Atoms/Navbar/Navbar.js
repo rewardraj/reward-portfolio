@@ -1,6 +1,7 @@
 import React from 'react'
 import { BiUser} from 'react-icons/bi';
-import { BsBriefcase, BsChatSquare } from 'react-icons/bs';
+import { BsBriefcase, BsCardList, BsChatSquare } from 'react-icons/bs';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 import { FaBars } from 'react-icons/fa';
 import { Nav, 
@@ -9,9 +10,11 @@ NavLogo,
 MobileIcon,
 NavMenu,
 NavItems,
-NavBtn,
-NavBtnLink, 
-StyledLink} from './NavbarElements'
+SocialIcons, 
+SocialLink,
+// NavBtn,
+// NavBtnLink, 
+StyledLink } from './NavbarElements'
 
 
 const Navbar = ({ toggle }) => {
@@ -37,14 +40,33 @@ const Navbar = ({ toggle }) => {
             </NavItems>
 
             <NavItems>
+                <BsCardList />
+                <StyledLink to='contact'>Services</StyledLink>
+            </NavItems>
+
+            <NavItems>
                 <BsChatSquare />
                 <StyledLink to='contact'>Contact</StyledLink>
             </NavItems>
-
-            <NavBtn>
-                <NavBtnLink to="/Resume">Resume</NavBtnLink>
-            </NavBtn>
         </NavMenu>
+
+        <SocialIcons>
+                <SocialLink>
+                    <FaGithub />
+                </SocialLink>
+
+                <SocialLink>
+                    <FaLinkedin />
+                </SocialLink>
+
+                <SocialLink>
+                    <FaTwitter />
+                </SocialLink>
+
+            </SocialIcons>
+          {/* <NavBtn>
+                <NavBtnLink to="/Resume">Resume</NavBtnLink>
+          </NavBtn> */}
         </NavbarContainer>
       </Nav>
     </>

@@ -7,16 +7,17 @@ import {
     HeroContainer,
     TextWrapper,
     HeroTitle,
+    HeroP,
     HeroDescription,
     ButtonWrapper,
     // Text,
-    SocialIcons,
-    SocialLink,
+    // SocialIcons,
+    // SocialLink,
     ImageWrapper,
+    // HeroSection
    
 } from './HeroElements';
 import Button from '../Button/Button';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 
 
@@ -28,9 +29,11 @@ const Hero = () => {
 
 
   return (
+    // <HeroSection>
     <HeroContainer id="home" ref={ref}>
         <TextWrapper>
             <FadeIn>
+                <HeroP>Hi! 👋, my name is</HeroP>
             <HeroTitle>REWARD EDOYUGBO</HeroTitle>
             </FadeIn>
             <HeroDescription>
@@ -40,20 +43,7 @@ const Hero = () => {
                 <Button text={"Contact me"} size="1.2rem"/>
                 {/* <Text>My Portfolio</Text> */}
 
-                <SocialIcons>
-                <SocialLink>
-                    <FaGithub />
-                </SocialLink>
-
-                <SocialLink>
-                    <FaLinkedin />
-                </SocialLink>
-
-                <SocialLink>
-                    <FaTwitter />
-                </SocialLink>
-
-            </SocialIcons>
+                
             </ButtonWrapper>
 
             
@@ -70,6 +60,7 @@ const Hero = () => {
         /> : null }
       
     </HeroContainer>
+    // </HeroSection>
   )
 }
 

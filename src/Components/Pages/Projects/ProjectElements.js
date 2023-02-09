@@ -3,10 +3,10 @@ import styled from "styled-components"
 export const ProjectContainer = styled.div`
     align-items: center;
     max-width: 1920px;
-    padding: var(--gutter) var(--whitespace);
+    padding: var(--macro) var(--whitespace);
     position: relative;
     min-height: 100vh;
-    width: 120%;
+    width: 100%;
 
     @media (max-width:770px) {
         padding: 0 var(--gutter);
@@ -15,11 +15,11 @@ export const ProjectContainer = styled.div`
 `
 
 export const Wrapper = styled.div`
-    padding: var(--gutter) var(--gutter);
-    grid-template-columns: repeat(auto-fit, 440px);
-    grid-gap: var(--whitespace);
-    max-width: 100%;
+    padding: var(--whitespace) var(--gutter);
     display: grid;
+    grid-template-columns: repeat(auto-fit, 440px);
+    grid-gap: var(--whitespace) var(--gutter);
+    max-width: 100%;
     align-items: center;
     justify-content: center;
 `
@@ -45,13 +45,11 @@ export const TextP = styled.p`
 `
 export const ProjectMain = styled.div`
     position: relative;
-    // overflow: hidden;
-    width: 100%;
-    max-width: 450px;
-    // margin: 0 auto;
-    border-radius: 0.75rem;
-    // background: #3196e2;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    align-items: center;
+    place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &:hover {
         transform: scale(1.05);
@@ -61,12 +59,8 @@ export const ProjectMain = styled.div`
 
 
 export const Image = styled.img`
-height: auto;
-width: 100%;
-border-radius: 0.40rem;
-transition-property: transform;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-duration: 500ms;
+max-width: 380px;
+border-radius: 20px;
 cursor: pointer;
 transform: scale(1); 
 
@@ -76,16 +70,9 @@ transform: scale(1);
 `
 
 export const PreTitle = styled.div`
-    // position: absolute;
-    // bottom: -100%;
-    // left: 3rem;
     font-size: var(--text-sm);
     color: var(--text-primary);
-
-    transition-property: transform;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 500ms;
-        z-index: 50;
+    padding: var(--default) 0;
 
     // &:hover {
     //     bottom: 6rem;

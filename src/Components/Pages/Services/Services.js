@@ -84,7 +84,7 @@ const Services = () => {
                     <TextH2>What I Do</TextH2>
                     <TextH3>I'm a Freelance Front-end Dev with 2 years of experience</TextH3>
                 </HeadingWrapper>
-                <Button text={"See my work"} size="1.2rem"/>
+                <Button text={"See more"} size="1rem"/>
             </TextWrapper> : null }
             
             <ServicesWrapper> {inView ? 

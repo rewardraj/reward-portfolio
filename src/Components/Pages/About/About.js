@@ -13,6 +13,7 @@ import CountUp from 'react-countup';
 
 import { 
   AboutContainer,
+  AboutSection,
   ImageWrapper,
   TextWrapper,
   Title,
@@ -22,8 +23,13 @@ import {
   StatsWrapper,
   StatsHolder,
   Exp,
+  SkillSection,
+  SkillNav,
+  SkillItem,
+  SkillImage
 } from './AboutElements';
 import aboutBG from '../../Photos/aboutBG.png'
+import Button from '../../Atoms/Button/Button';
 
 
 
@@ -36,8 +42,9 @@ const About = () => {
   });
 
   return (
-    <AboutContainer id='about' ref={ref}>{inView ?
-   
+    <AboutContainer id='about'>
+
+      <AboutSection ref={ref}> {inView ?
       <ImageWrapper src={aboutBG} 
       initial={{ x: -100, opacity: 0}}
       animate={{ x: 0, opacity: 1}}
@@ -90,9 +97,36 @@ const About = () => {
             <Exp>Satisfied <br />Customers</Exp>
           </StatsWrapper>
         </StatsContainer>
+        <Button text={"My Resume"} size={"1rem"} margin={"var(--gutter) 0"} />
       </TextWrapper> : null}
-    
+  </AboutSection>
 
+
+<SkillSection>
+      <SkillNav>
+        <SkillItem>
+          <SkillImage src='/styles/icons/html5.svg' />
+        </SkillItem>
+        <SkillItem>
+          <SkillImage src='/styles/icons/css3.svg' />
+        </SkillItem>
+        <SkillItem>
+          <SkillImage src='/styles/icons/javascript.svg'/>
+        </SkillItem>
+        <SkillItem>
+          <SkillImage src='/styles/icons/react.svg'/>
+        </SkillItem>
+        <SkillItem>
+          <SkillImage src='/styles/icons/nodejs-icon.svg'/>
+        </SkillItem>
+        <SkillItem>
+        <SkillImage src='/styles/icons/Git_icon.svg'/>
+        </SkillItem>
+        <SkillItem>
+          <SkillImage src='/styles/icons/svelte-icon.svg'/>
+        </SkillItem>
+      </SkillNav>
+</SkillSection>   
 
     </AboutContainer> 
   )

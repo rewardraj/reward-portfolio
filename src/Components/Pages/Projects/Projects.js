@@ -35,31 +35,31 @@ const Projects = () => {
        <ProjectMain>
         <Image src='/images/bike.webp'/>
         <PreTitle>Bike Rental</PreTitle>
-        <Text>Lorem ipsum dolor sit amet. Qui corrupti fugit rem dolores alias nam tenetur esse est esse quibusdam</Text>
+        <Text>Lorem ipsum dolor sit amet.</Text>
       </ProjectMain> 
 
       <ProjectMain>
         <Image src='/images/bot.jpeg'/>
         <PreTitle>Robit</PreTitle>
-        <Text>Lorem ipsum dolor sit amet. Qui corrupti fugit rem dolores alias nam tenetur esse est esse quibusdam</Text>
+        <Text>Lorem ipsum dolor sit amet.</Text>
       </ProjectMain>
 
       <ProjectMain>
         <Image src='/images/bike.webp'/>
         <PreTitle>Bike Rental</PreTitle>
-        <Text>Lorem ipsum dolor sit amet. Qui corrupti fugit rem dolores alias nam tenetur esse est esse quibusdam</Text>
+        <Text>Lorem ipsum dolor sit amet.</Text>
       </ProjectMain>
       
       <ProjectMain>
         <Image src='/images/bike.webp'/>
         <PreTitle>Bike Rental</PreTitle>
-        <Text>Lorem ipsum dolor sit amet. Qui corrupti fugit rem dolores alias nam tenetur esse est esse quibusdam</Text>
+        <Text>Lorem ipsum dolor sit amet.</Text>
       </ProjectMain> 
 
       <ProjectMain>
         <Image src='/images/bot.jpeg'/>
         <PreTitle>Robit</PreTitle>
-        <Text>Lorem ipsum dolor sit amet. Qui corrupti fugit rem dolores alias nam tenetur esse est esse quibusdam</Text>
+        <Text>Lorem ipsum dolor sit amet.</Text>
       </ProjectMain>
 
       </Wrapper> 

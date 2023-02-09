@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import styled from'styled-components'
-import Navbar from '../../Atoms/Navbar/Navbar.jsx'
-import Hero from '../../Atoms/Hero/Hero.jsx';
-import About from '../About/About.jsx';
-import Services from '../Services/Services.jsx';
-import Projects from '../Projects/Projects.jsx';
-import Contact from '../Contact/Contact.jsx';
+import Navbar from '../../Atoms/Navbar/Navbar.js'
+import Hero from '../../Atoms/Hero/Hero.js';
+import About from '../About/About.js';
+import Services from '../Services/Services.js';
+import Projects from '../Projects/Projects.js';
+import Contact from '../Contact/Contact.js';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 100vw;
+    max-width: 100%;
 `
 
   return (
@@ -26,8 +26,8 @@ const Wrapper = styled.div`
       <Navbar toggle={toggle}/>
       <Hero />
       <About />
-      <Services />
       <Projects />
+      <Services />
       <Contact />
     </Wrapper>
   )
