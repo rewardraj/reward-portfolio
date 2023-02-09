@@ -31,10 +31,26 @@ export const ProjectIntro = styled.div`
 
 export const TextH2 = styled.h2`
     line-height: 1.2rem;
-    margin-bottom: var(--gutter);
+    text-align: left;
+    margin: var(--whitespace) 0 var(--gutter);
     color: var(--text-primary);
-    font-size: var(--text-lg)
+    position: relative;
 
+    &::before {
+        font-size: 70px;
+        content: "PROJECTS";
+        line-height: 1.2rem;
+        position: absolute;
+        opacity: 0.1;
+        float: left;
+        text-align: left;
+        left: -0.5rem;
+        top: -3.5rem;
+        right: 0;
+        // overflow: hidden;
+        
+
+    }
 `
 
 export const TextP = styled.p`

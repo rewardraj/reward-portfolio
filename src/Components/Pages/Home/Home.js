@@ -1,15 +1,11 @@
-import React, { useState } from 'react'
-import styled from'styled-components'
-import Navbar from '../../Atoms/Navbar/Navbar.js'
-import Hero from '../../Atoms/Hero/Hero.js';
+import React, { useState } from 'react';
+import styled from 'styled-components';
 import About from '../About/About.js';
-import Services from '../Services/Services.js';
-import Projects from '../Projects/Projects.js';
 import Contact from '../Contact/Contact.js';
-
-const Home = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => {setIsOpen(!isOpen)};
+import Hero from '../../Atoms/Hero/Hero.js';
+import Navbar from '../../Atoms/Navbar/Navbar.js';
+import Projects from '../Projects/Projects.js';
+import Services from '../Services/Services.js';
 
 
 const Wrapper = styled.div`
@@ -17,13 +13,21 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
-`
+`;
+
+const Home = () => {
+
+    
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+      setIsOpen(!isOpen)
+    };
 
   return (
 
     <Wrapper>
-      <Navbar toggle={toggle}/>
+      <Navbar toggle={toggle} />
       <Hero />
       <About />
       <Projects />

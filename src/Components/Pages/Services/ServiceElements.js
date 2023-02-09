@@ -17,8 +17,8 @@ export const ServicesContainer = styled(motion.div)`
 `;
 
 export const TextWrapper = styled(motion.div)`
-   float: right;
-   text-align: right;
+   float: center;
+   text-align: center;
    margin-right: var(--whitespace);
 
     @media (max-width:770px) {
@@ -39,12 +39,28 @@ export const TextH2 = styled.h2`
     color: var(--text-primary);
     font-weight: 600;
     font-size: 45px;
+    display: block;
+    position: relative;
     margin-bottom: var(--default);
 
     @media (max-width:770px) {
         font-size: 38px;
         font-weight: 600;
         width: 100%;
+    }
+ 
+    &::before {
+        font-size: 80px;
+        content: "SERVICES";
+        position: absolute;
+        opacity: 0.1;
+        text-align: center;
+        top: -2.5rem;
+        left: 0;
+        right: 0;
+        // overflow: hidden;
+        
+
     }
 
 `

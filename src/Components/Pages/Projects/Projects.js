@@ -24,7 +24,7 @@ const Projects = () => {
     <ProjectContainer> 
       <Wrapper> 
       <ProjectIntro>
-        <TextH2>My Projects</TextH2>
+        <TextH2>& Collaborations</TextH2>
         <TextP>Lorem ipsum dolor sit amet. Qui corrupti fugit rem dolores alias nam tenetur esse est esse quibusdam. 
               Sit ipsa temporibus a quisquam 
               illo et voluptatem alias.

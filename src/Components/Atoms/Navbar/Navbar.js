@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BiUser} from 'react-icons/bi';
 import { BsBriefcase, BsCardList, BsChatSquare } from 'react-icons/bs';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
@@ -7,48 +7,48 @@ import { FaBars } from 'react-icons/fa';
 import { Nav, 
 NavbarContainer, 
 NavLogo, 
-MobileIcon,
-NavMenu,
-NavItems,
+NavLinks,
+NavLinkWrapper,
 SocialIcons, 
 SocialLink,
-// NavBtn,
-// NavBtnLink, 
-StyledLink } from './NavbarElements'
+MobileNavLinks,
+NavLink, 
+MobileIcon} from './NavbarElements'
 
 
-const Navbar = ({ toggle }) => {
+const Navbar = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+  
   return (
     <>
       <Nav id='nav'>
         <NavbarContainer>
         <NavLogo to='home' src='/images/logo.png'></NavLogo>
-
-        <MobileIcon onclick={toggle}>
-            <FaBars />
+        <MobileIcon>
+            <FaBars size={30} onClick={() => setIsOpen(!isOpen)} color='#fff' />
         </MobileIcon>
-
-        <NavMenu>
-            <NavItems>
+        <NavLinks>
+            <NavLinkWrapper>
                 <BiUser />
-                <StyledLink to='about'>About</StyledLink>
-            </NavItems>
+                <NavLink to='about'>About</NavLink>
+            </NavLinkWrapper>
 
-            <NavItems>
+            <NavLink>
                 <BsBriefcase />
-                <StyledLink to='projects'>Projects</StyledLink>
-            </NavItems>
+                <NavLink to='projects'>Projects</NavLink>
+            </NavLink>
 
-            <NavItems>
+            <NavLink>
                 <BsCardList />
-                <StyledLink to='contact'>Services</StyledLink>
-            </NavItems>
+                <NavLink to='contact'>Services</NavLink>
+            </NavLink>
 
-            <NavItems>
+            <NavLink>
                 <BsChatSquare />
-                <StyledLink to='contact'>Contact</StyledLink>
-            </NavItems>
-        </NavMenu>
+                <NavLink to='contact'>Contact</NavLink>
+            </NavLink>
+        </NavLinks>
 
         <SocialIcons>
                 <SocialLink>
@@ -63,10 +63,44 @@ const Navbar = ({ toggle }) => {
                     <FaTwitter />
                 </SocialLink>
 
-            </SocialIcons>
-          {/* <NavBtn>
-                <NavBtnLink to="/Resume">Resume</NavBtnLink>
-          </NavBtn> */}
+        </SocialIcons>
+
+            <MobileNavLinks isOpen={isOpen}>
+            <NavLink>
+                <BiUser />
+                <NavLink to='about'>About</NavLink>
+            </NavLink>
+
+            <NavLink>
+                <BsBriefcase />
+                <NavLink to='projects'>Projects</NavLink>
+            </NavLink>
+
+            <NavLink>
+                <BsCardList />
+                <NavLink to='contact'>Services</NavLink>
+            </NavLink>
+
+            <NavLink>
+                <BsChatSquare />
+                <NavLink to='contact'>Contact</NavLink>
+            </NavLink>
+
+            <SocialIcons>
+                <SocialLink>
+                    <FaGithub />
+                </SocialLink>
+
+                <SocialLink>
+                    <FaLinkedin />
+                </SocialLink>
+
+                <SocialLink>
+                    <FaTwitter />
+                </SocialLink>
+
+        </SocialIcons>
+            </MobileNavLinks>
         </NavbarContainer>
       </Nav>
     </>
