@@ -1,15 +1,19 @@
 import React from 'react'
-
-// intersection observer hook
-import { useInView } from 'react-intersection-observer';
+import styled from 'styled-components';
+import htmlImage from './Icons/html5.svg';
+import cssImage from './Icons/css3.svg';
+import JsImage from './Icons/javascript.svg';
+import nodeImage from './Icons/nodejs-icon.svg';
+import svelteImage from './Icons/svelte-icon.svg';
+import reactImage from './Icons/React-icon.svg';
+import gitImage from './Icons/Git_icon.svg';
+import FlipCard from '../../Atoms/Cards/FlipCard';
+import aboutBG from '../../Photos/aboutBG.png'
+import Button from '../../Atoms/Button/Button';
+import { motion } from 'framer-motion';
 
 //Countup
 import CountUp from 'react-countup';
-
-// Fade in
-// import FadeIn from '../../FadeIn/Fade';
-
-
 
 import { 
   AboutContainer,
@@ -23,29 +27,29 @@ import {
   StatsWrapper,
   StatsHolder,
   Exp,
-  SkillSection,
-  SkillNav,
-  SkillItem,
-  SkillImage
 } from './AboutElements';
-import aboutBG from '../../Photos/aboutBG.png'
-import Button from '../../Atoms/Button/Button';
 
 
 
+const SkillsContainer = styled.div`
+    align-items: center;
+    max-width: 1920px;
+    gap: var(--gutter);
+    padding: var(--whitespace) var(--whitespace);
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+`
 
 
 const About = () => {
   
-  const [ref, inView] = useInView({
-    threshold: 0.2,
-  });
-
   return (
     <AboutContainer id='about'>
 
-      <AboutSection ref={ref}> {inView ?
-      <ImageWrapper src={aboutBG} 
+      <AboutSection as={motion.div}> 
+       <ImageWrapper src={aboutBG} 
       initial={{ x: -100, opacity: 0}}
       animate={{ x: 0, opacity: 1}}
       transition={{
@@ -56,9 +60,8 @@ const About = () => {
         
     
 
-    : null}
 
-      {inView ? <TextWrapper
+      <TextWrapper as={motion.div}
         initial={{ x: 100, opacity: 0}}
         animate={{ x: 0, opacity: 1}}
         transition={{
@@ -98,37 +101,24 @@ const About = () => {
           </StatsWrapper>
         </StatsContainer>
         <Button text={"My Resume"} size={"1rem"} margin={"var(--gutter) 0"} />
-      </TextWrapper> : null}
+      </TextWrapper>
+
+      <SkillsContainer>
+        <FlipCard frontImage={htmlImage}  imageSize="100px" cardColor="#E44D26" progress={90} bgcolor={"#1572B6"}/>
+        <FlipCard frontImage={cssImage}  imageSize="100px" cardColor="#1572B6" progress={60} bgcolor={"#E44D26"} />
+        <FlipCard frontImage={JsImage} imageSize="100px" cardColor="#F7DF1E" progress={70} bgcolor={"#E44D26"}/>
+        <FlipCard frontImage={svelteImage} imageSize="100px" cardColor="#E44D26" progress={70} bgcolor={"#1572B6"}/>
+        <FlipCard frontImage={reactImage} imageSize="100px" cardColor="#000" progress={90} bgcolor={"#E44D26"}/>
+        <FlipCard frontImage={gitImage} imageSize="100px" cardColor="#1572B6" progress={90} bgcolor={"#E44D26"}/>
+        <FlipCard frontImage={nodeImage} imageSize="100px" cardColor="#215732" progress={40} bgcolor={"#1572B6"}/>
+
+  
+  </SkillsContainer>
   </AboutSection>
 
+  
 
-<SkillSection>
-      <SkillNav>
-        <SkillItem>
-          <SkillImage src='/styles/icons/html5.svg' />
-        </SkillItem>
-        <SkillItem>
-          <SkillImage src='/styles/icons/css3.svg' />
-        </SkillItem>
-        <SkillItem>
-          <SkillImage src='/styles/icons/javascript.svg'/>
-        </SkillItem>
-        <SkillItem>
-          <SkillImage src='/styles/icons/react.svg'/>
-        </SkillItem>
-        <SkillItem>
-          <SkillImage src='/styles/icons/nodejs-icon.svg'/>
-        </SkillItem>
-        <SkillItem>
-        <SkillImage src='/styles/icons/Git_icon.svg'/>
-        </SkillItem>
-        <SkillItem>
-          <SkillImage src='/styles/icons/svelte-icon.svg'/>
-        </SkillItem>
-      </SkillNav>
-</SkillSection>   
-
-    </AboutContainer> 
+</AboutContainer> 
   )
 }
 

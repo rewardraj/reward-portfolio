@@ -13,6 +13,7 @@ export const HeroContainer = styled.div`
     min-height: 100vh;
     justify-content: left;
     color: var(--text-primary);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     @media (max-width:768px) {
         display: flex;

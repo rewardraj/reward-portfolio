@@ -94,12 +94,18 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    background-color: #141e30;
+    // position: relative;
     background-image: linear-gradient(348deg, #141e30 0%, #243b55 100%);
     font-family: var(--futura-pt);
+    scroll-behavior: smooth;
   }
+
+html,
+body {
+  width: 100%;
+  scroll-behavior: smooth;
+  height: 100vh;
+  background-color: #141e30;
+}
 
 `

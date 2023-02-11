@@ -24,7 +24,7 @@ export const MobileNavLinks = styled.div`
         background-image: linear-gradient(348deg, #141e30 0%, #243b55 100%);
         display: ${props => (props.isOpen ? 'block' : 'none')};
         left: 0;
-        padding: 10px;
+        padding: 20px;
         right: 0;
         top: 80px;
     }
@@ -60,6 +60,7 @@ export const NavLinks = styled.ul`
     list-style: none;
     margin: 0;
     padding: 0;
+    color: var(--text-primary);
 
     @media (max-width: 768px) {
         display: none;
@@ -84,6 +85,7 @@ export const NavLink = styled.li`
     @media (max-width: 768px) {
         margin: 10px 0;
         text-align: center;
+        
     }
 `
 

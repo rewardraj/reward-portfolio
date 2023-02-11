@@ -21,6 +21,7 @@ const Contact = () => {
         <FormHeading>
         <TextH4>Get in touch</TextH4>
         <TextH2>I'm a message <br /> away!</TextH2>
+        
         </FormHeading>
       </TextWrapper>
 

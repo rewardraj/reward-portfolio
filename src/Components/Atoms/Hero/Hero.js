@@ -1,7 +1,8 @@
 import React from 'react';
 import Typed from '../Typed/Typed';
 import FadeIn from '../../FadeIn/Fade';
-import HeroBg from '../../Photos/heroBG.png';
+// import HeroBg from '../../Photos/heroBG.png';
+import Trial from '../../Photos/trialBG.jpeg'
 
 import {
     HeroContainer,
@@ -49,7 +50,7 @@ const Hero = () => {
             
         </TextWrapper> { inView ? 
 
-        <ImageWrapper src={HeroBg}
+        <ImageWrapper src={Trial}
         initial={{ x: 100, opacity: 0}}
         animate={{ x: 0, opacity: 1}}
         transition={{

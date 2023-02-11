@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState, useEffect } from 'react'
 import styled, { keyframes } from 'styled-components';
 
@@ -20,7 +21,7 @@ const DescText = styled.div`
         gap: 10px;
         justify-content: center;
         align-items: center;
-        display flex;
+        display: flex;
     }
 `
 const Blinker = styled.span`
@@ -67,9 +68,9 @@ const Typed = ({ phrases = [] }) => {
               setIndex((prevIndex) => (prevIndex + 1) % phrases.length);
             }
             break;
-        default: 
-            console.log("Unknown phrase");
+            
         }
+      
       }
   
       setTimeout(type, phase !== "hold" ? 150 : 1000);

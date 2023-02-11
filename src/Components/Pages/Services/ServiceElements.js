@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export const ServicesContainer = styled(motion.div)`
     align-items: center;
     max-width: 1920px;
-    padding: var(--gutter) var(--whitespace) 0;
+    padding: var(--whitespace) var(--whitespace) 0;
     position: relative;
     min-height: 100vh;
 
@@ -19,7 +19,7 @@ export const ServicesContainer = styled(motion.div)`
 export const TextWrapper = styled(motion.div)`
    float: center;
    text-align: center;
-   margin-right: var(--whitespace);
+   padding: var(--whitespace) 0 0;
 
     @media (max-width:770px) {
         justify-content: center;
@@ -77,7 +77,7 @@ export const TextH3 = styled.h3`
 
 export const ServicesWrapper = styled(motion.div)`
    color: var(--text-primary);
-   margin: 20rem var(--whitespace);
+   padding: var(--whitespace) var(--whitespace) 0;
    font-size: 22px;
 
    @media(max-width:770px) {

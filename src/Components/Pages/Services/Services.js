@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../../Atoms/Button/Button';
 import { BsArrowUpRightCircleFill } from 'react-icons/bs';
+import { motion } from 'framer-motion';
 
 
 import { 
@@ -17,7 +18,7 @@ NameWrapper,
 LinkWrapper, 
 DescWrapper
 } from './ServiceElements';
-import { useInView } from 'react-intersection-observer';
+
 
 
 
@@ -41,37 +42,18 @@ const servicesData = [
     }
 ];
 
-// Custom animation settings
-const animateContainer = {
-    hidden: {opacity: 0 },
-    show: {
-        opacity: 1,
-        transition: {
-            easeIn: [0, 0.17, 0.2, 1.01],
-            duration: 0.8,
-            delayChildren: 0.2,
-            staggerChildren: 0.6,
-        }
-    }
-}
-
 const animateItem = {
     hidden: {opacity: 0},
     show: {opacity: 1}
 }
 
 const Services = () => {
-
-    const [ref, inView] = useInView({
-        threshold: 0.1 ,
-    });
-
   return (
-    // <section className='section' id='services'> 
-        <ServicesContainer ref={ref}>
+ 
+        <ServicesContainer>
 
-        {inView ? 
-            <TextWrapper
+       
+            <TextWrapper as={motion.div}
              initial={{ x: -100, opacity: 1}}
              animate={{ x: 0, opacity: 1}}
              transition={{
@@ -85,17 +67,16 @@ const Services = () => {
                     <TextH3>I'm a Freelance Front-end Dev with 2 years of experience</TextH3>
                 </HeadingWrapper>
                 <Button text={"See more"} size="1rem"/>
-            </TextWrapper> : null }
+            </TextWrapper>
             
-            <ServicesWrapper> {inView ? 
+            <ServicesWrapper>
                 <ServicesHandler>
                     {servicesData.map((service, index) => {
+
                         // destructure servicesData
                         const {name, description, link} = service;
                         return <Container key={index}
-                            variants={animateContainer}
-                            initial="hidden"
-                            animate="show"
+                            
                         > 
                             <Wrapper>
                                 <NameWrapper variants={animateItem}>{name}</NameWrapper>
@@ -107,7 +88,7 @@ const Services = () => {
                             </LinkWrapper>
                         </Container>
                     })}
-                </ServicesHandler>  :null }
+                </ServicesHandler>
             </ServicesWrapper> 
         </ServicesContainer> 
     // </section>

@@ -1,20 +1,22 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
-export const ProjectContainer = styled.div`
+export const ProjectContainer = styled(motion.div)`
     align-items: center;
     max-width: 1920px;
-    padding: var(--macro) var(--whitespace);
+    padding: var(--gutter) var(--whitespace);
     position: relative;
     min-height: 100vh;
     width: 100%;
 
     @media (max-width:770px) {
-        padding: 0 var(--gutter);
+        padding: var(--whitespace) var(--gutter);
+        
     }
 
 `
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
     padding: var(--whitespace) var(--gutter);
     display: grid;
     grid-template-columns: repeat(auto-fit, 440px);
@@ -24,9 +26,20 @@ export const Wrapper = styled.div`
     justify-content: center;
 `
 
-export const ProjectIntro = styled.div`
+export const ProjectIntro = styled(motion.div)`
     max-width: 600px;
     margin-bottom: 2.5rem;
+    place-items: center;
+    left: var(--gutter);
+    position: relative;
+
+    @media (max-width:770px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: 0;
+        
+    }
 `
 
 export const TextH2 = styled.h2`
@@ -42,15 +55,17 @@ export const TextH2 = styled.h2`
         line-height: 1.2rem;
         position: absolute;
         opacity: 0.1;
-        float: left;
-        text-align: left;
-        left: -0.5rem;
         top: -3.5rem;
-        right: 0;
-        // overflow: hidden;
         
-
     }
+
+    @media (max-width:770px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 `
 
 export const TextP = styled.p`
@@ -58,14 +73,18 @@ export const TextP = styled.p`
     margin-bottom: var(--gutter);
     font-size: 22px;
     color: var(--text-primary);
+
+    @media (max-width:770px) {
+        text-align: center;
+        align-items: center;
+    
+    }
 `
-export const ProjectMain = styled.div`
-    position: relative;
-    align-items: center;
+export const ProjectMain = styled(motion.div)`
     place-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
 
     &:hover {
         transform: scale(1.05);
@@ -74,28 +93,19 @@ export const ProjectMain = styled.div`
 `
 
 
-export const Image = styled.img`
+export const Image = styled(motion.img)`
 max-width: 380px;
 border-radius: 20px;
 cursor: pointer;
 transform: scale(1); 
-
-// &:hover {
-//     transform: scale(1.05);
-// }
 `
 
-export const PreTitle = styled.div`
+export const PreTitle = styled(motion.div)`
     font-size: var(--text-sm);
     color: var(--text-primary);
     padding: var(--default) 0;
-
-    // &:hover {
-    //     bottom: 6rem;
-        
-    // }
 `
 
-export const Text = styled.span`
+export const Text = styled(motion.span)`
     color: var(--text-primary);
 `
